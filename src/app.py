@@ -1,4 +1,6 @@
-from utils import db_connect
-engine = db_connect()
+from flask import Flask
+app = Flask(__name__)
 
-# your code here
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'

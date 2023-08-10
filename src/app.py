@@ -10,7 +10,6 @@ class_dict = {
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
-    prediction = None
     if request.method == "POST":
         
         # Obtain values from form
@@ -21,7 +20,6 @@ def index():
         
         data = [[val1, val2, val3, val4]]
         prediction = str(model.predict(data)[0])
-        print(prediction)
         pred_class = class_dict[prediction]
     else:
         pred_class = None

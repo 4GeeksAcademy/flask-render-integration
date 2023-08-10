@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris - Predicción del modelo</title>
+</head>
+<body>
+    <h2>Introduce los valores</h2>
+    
+    <form action="/" method="post">
+        Petal width: <input type="number" step="any" name="val1" required><br><br>
+        Longitud del pétalo: <input type="number" step="any" name="val2" required><br><br>
+        Anchura del sépalo: <input type="number" step="any" name="val3" required><br><br>
+        Longitud del sépalo: <input type="number" step="any" name="val4" required><br><br>
+        <input type="submit" value="Predecir">
+    </form>
+    
+    {% if prediction != None %}
+        <h3>Predicción: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
